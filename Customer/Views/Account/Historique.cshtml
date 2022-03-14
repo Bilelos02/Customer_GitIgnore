@@ -1,0 +1,18 @@
+﻿@using Models;
+<table>
+    <thead>
+        <tr>
+            <th>Montant</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Account item in ViewBag.ListOperation)
+        {
+            <tr>
+                <td>@item.operation " " @item.WithdrawalAmount</td>
+                <td>@item.OperationDate</td>
+            </tr>
+        }
+    </tbody>
+</table>
